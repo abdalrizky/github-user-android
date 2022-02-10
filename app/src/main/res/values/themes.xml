@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.GithubUser" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/gray_light</item>
+        <item name="colorPrimaryVariant">@color/gray_light</item>
+        <item name="colorOnPrimary">@color/gray_light</item>
+        <item name="colorSecondary">@color/gray_extra_light</item>
+        <item name="colorSecondaryVariant">@color/gray_extra_light</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.GithubUser.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SearchActivityTheme" parent="Theme.GithubUser.NoActionBar" />
+
+    <style name="SplashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_image_light</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="CardViewStyle">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="TextViewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="FollowersFollowingsFragmentStyle">
+        <item name="android:background">@color/gray_extra_dark</item>
+    </style>
+
+    <style name="DetailInformationIcon">
+        <item name="tint">@color/black</item>
+    </style>
+
+    <style name="Theme.GithubUser.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.GithubUser.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

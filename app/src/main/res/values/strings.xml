@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Github User</string>
+    <string name="menu_home">Beranda</string>
+    <string name="menu_favorite">Favorit</string>
+    <string name="menu_about">Tentang</string>
+    <string name="dialog_about_message">Aplikasi ini dibuat oleh Muhammad Abdal Rizky.</string>
+    <string name="dialog_ok">OK</string>
+    <string name="search">Cari</string>
+    <string name="popular_developer" tools:ignore="Typos">Pengembang Populer Terkini</string>
+    <string name="developer_name">Developer Name</string>
+    <string name="developer_username">developer_username</string>
+    <string name="share">Bagikan</string>
+    <string name="developer_location">developer_location</string>
+    <string name="developer_company">developer_company</string>
+    <string name="followings">Diikuti</string>
+    <string name="followers">Pengikut</string>
+    <string name="number_of_search" tools:ignore="PluralsCandidate">Hasil Pencarian: %1$d hasil</string>
+    <string name="_d_repository">%d\nRepositori</string>
+    <string name="_d_followers">%d\nPengikut</string>
+    <string name="_d_followings">%d\nDiikuti</string>
+    <string name="location_icon">Ikon Lokasi</string>
+    <string name="company_icon">Ikon Perusahaan</string>
+    <string name="tab_text_1">Pengikut</string>
+    <string name="tab_text_2">Diikuti</string>
+    <string name="rank">#%d</string>
+    <string name="arrow_icon">Ikon Panah</string>
+    <string name="there_is_no_following">Tidak ada diikuti.</string>
+    <string name="there_is_no_follower">Tidak ada pengikut.</string>
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="favorite_list">Daftar Favorit</string>
+    <string name="failure">Gagal menampilkan data.</string>
+    <string name="there_is_no_favorite">Belum ada yang difavoritkan.</string>
+</resources>

@@ -1,0 +1,17 @@
+package com.abdalrizky.githubuser.api
+
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+class ApiClient {
+
+    companion object {
+        fun getApiService(): ApiService {
+            val retrofit = Retrofit.Builder()
+                .baseUrl("https://api.github.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+            return retrofit.create(ApiService::class.java)
+        }
+    }
+}
