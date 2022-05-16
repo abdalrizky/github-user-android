@@ -25,12 +25,12 @@ class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
 
         viewModel = ViewModelProvider(this).get(FavoriteViewModel::class.java)
 
-        viewModel.getAllUserFavorite().observe(viewLifecycleOwner, {
+        viewModel.getAllUserFavorite().observe(viewLifecycleOwner) {
             if (it != null) {
                 val users = mapList(it)
                 setFavoriteData(users)
             }
-        })
+        }
     }
 
     private fun mapList(users: List<FavoriteUser>): List<User> {

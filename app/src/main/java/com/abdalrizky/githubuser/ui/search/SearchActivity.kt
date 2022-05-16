@@ -31,22 +31,22 @@ class SearchActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
 
-        viewModel.numberOfSearches.observe(this, { value ->
+        viewModel.numberOfSearches.observe(this) { value ->
             if (value != null) {
                 setNumberOfSearches(value)
             } else {
                 setNumberOfSearches(null)
             }
-        })
+        }
 
-        viewModel.user.observe(this, { user ->
+        viewModel.user.observe(this) { user ->
             if (user != null) {
                 setSearchData(user)
                 showLoading(false)
             } else {
                 showLoading(false)
             }
-        })
+        }
 
         val layoutManager = LinearLayoutManager(this)
         binding.appBarSearch.contentSearch.rvUser.layoutManager = layoutManager

@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             this,
             PreferencesViewModelFactory(pref)
         ).get(MainViewModel::class.java)
-        viewModel.getThemeSetting().observe(this, { isDarkModeActive: Boolean ->
+        viewModel.getThemeSetting().observe(this) { isDarkModeActive: Boolean ->
             if (isDarkModeActive) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 btnNightMode.isChecked = true
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 btnNightMode.isChecked = false
             }
-        })
+        }
 
         btnNightMode.setOnCheckedChangeListener { _: CompoundButton, isChecked: Boolean ->
             viewModel.saveThemeSetting(isChecked)

@@ -25,14 +25,14 @@ class FollowersFragment : Fragment(R.layout.fragment_followers) {
         showLoading(true)
         viewModel = ViewModelProvider(this).get(FollowersViewModel::class.java)
 
-        viewModel.user.observe(viewLifecycleOwner, { user ->
+        viewModel.user.observe(viewLifecycleOwner) { user ->
             if (user != null) {
                 setFollowersData(user)
                 showLoading(false)
             } else {
                 showLoading(false)
             }
-        })
+        }
 
         viewModel.getFollowers(username)
     }

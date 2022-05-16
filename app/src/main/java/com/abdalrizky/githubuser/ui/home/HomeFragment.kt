@@ -24,7 +24,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         showLoading(true)
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-        viewModel.user.observe(viewLifecycleOwner, { user ->
+        viewModel.user.observe(viewLifecycleOwner) { user ->
             if (user != null) {
                 setTrendingData(user)
                 showLoading(false)
@@ -32,7 +32,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 setTrendingData(null)
                 showLoading(false)
             }
-        })
+        }
 
         binding.rvUser.layoutManager = LinearLayoutManager(context)
         viewModel.getTrendingDeveloper()

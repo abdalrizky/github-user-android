@@ -1,5 +1,3 @@
-@file:Suppress("KotlinDeprecation")
-
 package com.abdalrizky.githubuser.ui.detail
 
 import android.content.Intent
@@ -44,7 +42,7 @@ class DetailActivity : AppCompatActivity() {
 
         showLoading(true)
 
-        viewModel.user.observe(this, {
+        viewModel.user.observe(this) {
             if (it != null) {
                 setDetailData(it)
                 showLoading(false)
@@ -53,7 +51,7 @@ class DetailActivity : AppCompatActivity() {
                 onBackPressed()
                 Toast.makeText(this, "Gagal menampilkan halaman detail.", Toast.LENGTH_SHORT).show()
             }
-        })
+        }
 
         viewModel.getDetailUser(user.login)
 
